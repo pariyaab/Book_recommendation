@@ -4,7 +4,7 @@ It is a practical recommendation system (retrieval and ranking tasks) using Tens
 ##What is a recommendation system?!
 A recommendation system ia a system that gives a query (context) which is what we know about the liking list, and filter the corpus (full catalog of items) to a shortlist of candidates (items, documents). A query (context) can be a user id, user's geographical location or user's history of previous purchases and the resulting candidates can be some new items that we guess are interesting for the user.
 
-##Recommendation stages (tasks)
+## Recommendation stages (tasks)
 In practice, dealing with a large corpus and filter it to a shortlist is an intractable and inefficient task. So practical recommender systems has two (or three) filterng phase
 
     1. Retrieval (Candidate Generation)
@@ -28,3 +28,10 @@ And a candidate can have features like:
     etc.
 
 These obviouse features can be numerical variables, categorical variables, bitmaps or raw texts. However, these low-level features are not enough and we should extract some more abstract latent features from these obvious features to represent the query or the candidate as a numerical high-dimensional vector - known as Embedding Vector.
+
+To involve side-features as well as ids while learning latent features (embeddings), we can use deep neural network (DNN) architectures like softmax or two-tower neural models.
+YouTube two-tower neural model uses side-features to represent queries and candidates in an abstract high-dimentional embedding vector.
+
+## Book dataset
+
+The book dataset is a benchmark dataset in the field of recommender system research containing a set of voting given to book by a set of users, collected from the amazon_us_review website.
